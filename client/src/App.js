@@ -34,28 +34,3 @@ function App() {
 }
 
 export default App;
-
-
-// =====================================================
-
-
-
-// function App() {
-//   const { loading } = useAuth0();
-
-//   if (loading) {
-//     return (
-//       <div>Loading...</div>
-//     );
-//   }
-
-//   return (
-//     <div className="App">
-//       <header>
-//         <Nav />
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
