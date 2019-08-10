@@ -1,21 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-// function Nav() {
-//   return (
-//     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-//       <a className="navbar-brand" href="/">
-//         React Reading List
-//       </a>
-//     </nav>
-//   );
-// }
-
-// export default Nav;
-
-// src/components/NavBar.js
-
-
 import { useAuth0 } from "../../react-auth0-wrapper";
 
 const Nav = () => {
@@ -29,7 +13,7 @@ const Nav = () => {
             loginWithRedirect({})
           }
         >
-          Log in
+          Book an appointment
         </button>
       )}
 
