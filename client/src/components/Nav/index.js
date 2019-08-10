@@ -4,7 +4,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <a className="navbar-brand" href="/">
-        React "I'm Locked Up!"
+        React Reading List
       </a>
     </nav>
   );
