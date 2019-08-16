@@ -1,4 +1,8 @@
 const db = require("../models");
+var Zillow  = require('node-zillow')
+
+var zwsid = "X1-ZWz1haedpc1lvv_7sxq3"
+var z = new Zillow(zwsid)
 
 // Defining methods for the booksController
 module.exports = {
@@ -8,6 +12,16 @@ module.exports = {
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  search: function(req,res){
+    
+    z.get('GetSearchResults', {citystatezip:"audubon, new jersey, 08106", address: "508 elm ave"})
+    .then(function(results){
+      console.log('inside .then',results.response)
+      res.status(200).json(results.response)
+      return results
+})
+
   },
   findById: function(req, res) {
     db.Book

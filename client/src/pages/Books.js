@@ -20,7 +20,7 @@ class Books extends Component {
   }
 
   loadBooks = () => {
-    API.getBooks()
+    API.search()
       .then(res =>
         this.setState({ books: res.data })
       )
@@ -96,7 +96,7 @@ class Books extends Component {
               <List>
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                    <Link to={"/listings/" + book._id}>
                       <strong>
                         {book.title} by {book.author}
                       </strong>
