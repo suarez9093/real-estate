@@ -16,7 +16,7 @@ const Auth0Nav = () => {
             loginWithRedirect({})
           }
         >
-          Log in
+          Log in to schedule a viewing
         </button>
       )}
 

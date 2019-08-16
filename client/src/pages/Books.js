@@ -59,7 +59,7 @@ class Books extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>This is where the content for the houses should be displayed</h1>
             </Jumbotron>
             <form>
               <Input
@@ -90,7 +90,7 @@ class Books extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Images of the houses</h1>
             </Jumbotron>
             {this.state.books.length ? (
               <List>

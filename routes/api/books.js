@@ -6,6 +6,15 @@ router.route("/")
   .get(booksController.findAll)
   .post(booksController.create);
 
+  // Added for Auth0
+  // ==========================================
+  // router.route("/schedule")
+  // .get(booksController.findAll)
+  // .post(booksController.create);
+
+  // ==========================================
+
+
 // Matches with "/api/books/:id"
 router
   .route("/:id")
