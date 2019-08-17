@@ -59,21 +59,21 @@ getData = async () =>{
 
     componentDidMount() {
         this.getData()
-    //     let rooms = this.formatData(items)
-    //     // console.log("rooms:", rooms)
-    //     let featuredRooms = rooms.filter(room => room.featured === true);
-    //   let maxPrice = Math.max(...rooms.map(item=> item.price));
-    //   let maxSize = Math.max(...rooms.map(item=> item.size));
+        let rooms = this.formatData(items)
+        // console.log("rooms:", rooms)
+        let featuredRooms = rooms.filter(room => room.featured === true);
+      let maxPrice = Math.max(...rooms.map(item=> item.price));
+      let maxSize = Math.max(...rooms.map(item=> item.size));
 
-    //     this.setState({
-    //         rooms,
-    //         featuredRooms,
-    //         sortedRooms: rooms,
-    //         loading: false,
-    //         price:maxPrice,
-    //         maxPrice,
-    //         maxSize,
-    //     });
+        this.setState({
+            rooms,
+            featuredRooms,
+            sortedRooms: rooms,
+            loading: false,
+            price:maxPrice,
+            maxPrice,
+            maxSize,
+        });
     }
 
     formatData(items) {

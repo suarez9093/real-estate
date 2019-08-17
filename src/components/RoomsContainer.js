@@ -24,31 +24,31 @@ export default withRoomConsumer(RoomsContainer)
 
 
 // import React from 'react'
-// import RoomsFilter from './RoomsFilter'
-// import RoomsList from './RoomsList'
-// import { Roomsonsumer, RoomConsumer } from '../Context'
+// import HomesFilter from './HomesFilter'
+// import HomesList from './HomesList'
+// import { Homesonsumer, HomeConsumer } from '../Context'
 // import Loading from './Loading'
 
 
 
-// export default function RoomsContainer() {
+// export default function HomesContainer() {
 //     return (
-//         <RoomConsumer>
+//         <HomeConsumer>
 //             {
 //                 (value) => {
-//                     const { loading, sortedRooms, rooms } = value
+//                     const { loading, sortedHomes, homes } = value
 //                     if(loading){
 //                         return <Loading />;
 //                     }
 //                     return (
 
 //                         <div>
-//                             hello from Rooms Container
-//             <RoomsFilter rooms={rooms} />
-//                             <RoomsList rooms={sortedRooms} />
+//                             hello from Homes Container
+//             <HomesFilter homes={homes} />
+//                             <HomesList homes={sortedHomes} />
 //                         </div>
 //                     );
 //                 }}
-//         </RoomConsumer>
+//         </HomeConsumer>
 //     );
 // }

@@ -48,7 +48,7 @@ export default function RoomsFilter({rooms}) {
             {/* end select type */}
              {/* guest */}
              <div className="form-group">
-                <label htmlFor="capacity">Guest</label>
+                <label htmlFor="capacity">Garage</label>
                     <select name="capacity"
                      id="capacity"
                       value={capacity} className="form-control" 
@@ -88,13 +88,13 @@ export default function RoomsFilter({rooms}) {
             <div className="form-group">
                 <div className="single-extra">
                     <input type="checkbox" name="breakfast" id="breakfast" checked={breakfast} onChange={handleChange}></input>
-                    <label htmlFor="breakfast">breakfast</label>
+                    <label htmlFor="breakfast">view now</label>
                 </div>
                 <div className="single-extra">
                     <input type="checkbox" name="pets" 
                     id="pets" 
                     checked={pets} onChange={handleChange}></input>
-                    <label htmlFor="pets">pets</label>
+                    <label htmlFor="pets">view today</label>
                 </div>
             </div>
             {/* end of extras */}

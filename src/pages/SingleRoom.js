@@ -27,14 +27,14 @@ export default class SingleRoom extends Component {
             </div>
             );
         }
-        const {name,description,capacity,size,price,extras,breakfast,pets,images} = room;
+        const {name,description,capacity,size,price,breakfast,pets,images} = room;
         const [mainImg,...defaultImg] = images;
         return (
             <>
             <StyledHero img={mainImg || this.state.defaultBcg}>
-                <Banner title={`${name} room`}>
+                <Banner title={`${name} home`}>
                     <Link to="/rooms" className="btn-primary">
-                        back to rooms
+                        back to listings
                     </Link>
                 </Banner>
             </StyledHero>
@@ -55,23 +55,23 @@ export default class SingleRoom extends Component {
                         <h6>price : ${price}</h6>
                         <h6>size: ${size} SQFT</h6>
                         <h6>
-                            max capacity : {
-                                capacity > 1 ?`${capacity} people`: `${capacity}person`
+                            Gaurage Parking : {
+                                capacity > 1 ?`${capacity} cars`: `${capacity}person`
                             }
                         </h6>
-                        <h6>{pets? "pets allowed":"no pets allowed"}</h6>
-                        <h6>{breakfast && "free breakfast included"}</h6>
+                        <h6>{pets? "open viewings today":"no viewings available today"}</h6>
+                        <h6>{breakfast && "open views now"}</h6>
                     </article>
                 </div>
             </section>
-            <section className="room-extras">
+            {/* <section className="room-extras">
                 <h6>extras</h6>
                 <ul className="extras">
                     {extras.map((item,index) =>{
                         return <li key={index}>- {item}</li>
                     })}
                 </ul>
-            </section>
+            </section> */}
             </>
         );
     }
