@@ -60,7 +60,7 @@ export default class SingleRoom extends Component {
                             }
                         </h6>
                         <h6>{pets? "open viewings today":"no viewings available today"}</h6>
-                        <h6>{breakfast && "open views now"}</h6>
+                        <h6 className="btn-primary">{breakfast && "open viewing now"}</h6>
                     </article>
                 </div>
             </section>

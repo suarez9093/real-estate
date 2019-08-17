@@ -73,7 +73,7 @@ export default function RoomsFilter({rooms}) {
             {/* end of room price */}
             {/* size */}
             <div className="form-group">
-                <label htmlFor="size">home size</label>
+                <label htmlFor="size">home size sq ft</label>
                    <div className="size-inputs">
                        <input type="number" name="minSize" id="size"
                        value={minSize} onChange={handleChange}

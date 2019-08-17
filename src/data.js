@@ -23,7 +23,7 @@ export default [
     fields: {
       name: "urban modern",
       slug: "single-economy",
-      type: "single",
+      type: "modern",
       price: 1000000,
       size: 5500,
       capacity: 3,
@@ -80,7 +80,7 @@ export default [
     fields: {
       name: "craftsman",
       slug: "single-basic",
-      type: "single",
+      type: "craftsman",
       price: 1500000,
       size: 250,
       capacity: 2,
@@ -137,7 +137,7 @@ export default [
     fields: {
       name: "Modern Contemporary",
       slug: "single-standard",
-      type: "single",
+      type: "modern",
       price: 2500000,
       size: 5300,
       capacity: 4,
@@ -194,7 +194,7 @@ export default [
     fields: {
       name: "Tudor",
       slug: "single-deluxe",
-      type: "single",
+      type: "contemporary",
       price: 700000,
       size: 2400,
       capacity: 2,
