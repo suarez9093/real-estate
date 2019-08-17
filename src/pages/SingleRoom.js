@@ -22,8 +22,8 @@ export default class SingleRoom extends Component {
         if (!room){
             return(
            <div className="error">
-                <h3>no such room could be found...</h3>
-                <Link to="/rooms" className="btn-primary"> back to rooms</Link>
+                <h3>no such search could be found...</h3>
+                <Link to="/rooms" className="btn-primary"> back to listings</Link>
             </div>
             );
         }
@@ -53,7 +53,7 @@ export default class SingleRoom extends Component {
                     <article className="info">
                         <h3>info</h3>
                         <h6>price : ${price}</h6>
-                        <h6>size: ${size} SQFT</h6>
+                        <h6>size: {size} SQFT</h6>
                         <h6>
                             Gaurage Parking : {
                                 capacity > 1 ?`${capacity} cars`: `${capacity}person`
