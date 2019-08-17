@@ -59,7 +59,7 @@ export default function RoomsFilter({rooms}) {
             {/* end guest */}
             {/* room price */}
             <div className="form-group">
-                <label htmlFor="price">home price {price}</label>
+                <label htmlFor="price">home price ${price}</label>
                     <input name="price"
                      type="range"
                       min={minPrice} max={maxPrice}
