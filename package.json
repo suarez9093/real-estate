@@ -20,14 +20,6 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-<<<<<<< HEAD
-  "dependencies": {
-    "axios": "^0.18.1",
-    "express": "^4.17.1",
-    "if-env": "^1.0.4",
-    "json-loader": "^0.5.7",
-    "mongoose": "^5.3.16"
-=======
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,6 +31,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
->>>>>>> master
   }
 }
