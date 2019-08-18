@@ -20,7 +20,7 @@ class Home extends Component {
                                 Listings
                             </Link>
     
-                            : <Link to="/" className="btn-primary">
+                            : <Link to="/login" className="btn-primary">
                                 Log in to view listings
                             </Link>}
                     </Banner>
