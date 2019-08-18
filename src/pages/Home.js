@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 // import FeaturedRooms from '../components/FeaturedRooms'
 
 
-const Home = () => {
+function Home(){
     return (
         <>
         <Hero>

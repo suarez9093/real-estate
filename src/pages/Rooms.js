@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import RoomsContainer from '../components/RoomsContainer';
 
-const Room = () => {
+function Room() {
     return( 
         <>
     <Hero hero="roomsHero">

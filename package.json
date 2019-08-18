@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.1.1",
     "contentful": "^7.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
