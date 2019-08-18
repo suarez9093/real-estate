@@ -20,10 +20,14 @@ export default class Navbar extends Component {
                         <Link to="/">
                             <img  alt="My Realitor.com" />
                         </Link>
+                        
                         <button type="button" className="nav-btn" onClick={this.handleToggle}>
                             {/* <FaAlignRight className="nav-icon" /> */}
                         </button>
                     </div>
+
+                    {/* Firebase */}
+                    {this.props.authenticated ? 
                     <ul className={this.state.isOPEN?"nav-links show-nav":"nav-links"}>
                         <li>
                             <Link to="/">Home</Link>
@@ -32,7 +36,10 @@ export default class Navbar extends Component {
                             <Link to="/rooms">Listings</Link>
                         </li>
                     </ul>
+                        : null}
+                        {/*  */}
                 </div>
+                
             </nav>
         )
     }

@@ -9,13 +9,19 @@ import {Link} from 'react-router-dom'
 const Home = () => {
     return (
         <>
+       
         <Hero>
-          <Banner title="luxurious homes" subtitle="Find your dream home today">
-              <Link to='/rooms' className="btn-primary">
+        
+          <Banner title="luxurious homes" subtitle="Log in to view our homes">
+           
+              {/* <Link to='/rooms' className="btn-primary">
                   Listings
-              </Link>
+              </Link> */}
+            
               </Banner>  
+              
         </Hero>
+      
         {/* <Servives /> */}
         {/* <FeaturedRooms rooms="rooms"/> */}
         
