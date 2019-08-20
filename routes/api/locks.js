@@ -22,6 +22,7 @@ axios.defaults.params['access_token'] = backupAccessToken;
 //         console.log(`Get authentication code complete`);
 //     });
 
+
 // GET all locks
 axios.get('/v2/locks', {
     params: {
@@ -29,11 +30,22 @@ axios.get('/v2/locks', {
     }
 })
     .then(function(res) {
-        console.log(res);
+        for(i=0; i<res.data.length; i++) {
+            console.log({
+                id: res.data[i].id,
+                name: res.data[i].name,
+                lockState: res.data[i].state
+            });
+        }
     })
     .catch(function(err) {
         console.log(err);
     })
     .finally(function() {
-        console.log(`get all locks complete`);
+        console.log(`GET all locks ✅`);
     });
+
+
+// PUT: this will lock or unlock Locks
+// const lockId = 1234
+// axios.put(`/v2/locks/${lockId}`)
