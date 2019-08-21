@@ -27,9 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        {/* <Auth0Nav /> */}
-      </header>
+      
     
       <Navbar />
       <Switch>

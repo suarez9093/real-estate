@@ -5,16 +5,25 @@ import Hero from '../components/Hero'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../Context'
 import StyledHero from '../components/StyledHero'
+import ModalComponent from "../components/ModalComponent"
+import {Modal, Button} from 'react-bootstrap';
 
 
-export default class SingleRoom extends Component {
+class SingleRoom extends Component {
     constructor(props) {
         super(props);
         this.state ={
             slug:this.props.match.params.slug,
             defaultBcg
         };
+        this.handleClick = this.handleClick.bind(this)
     }
+
+
+    handleClick() {
+     
+    }
+
     static contextType = RoomContext;
     render() {
         const {getRoom} = this.context;
@@ -61,10 +70,13 @@ export default class SingleRoom extends Component {
                         </h6>
                         <h6>{pets? "open viewings today":"no viewings available today"}</h6>
                         <h6>{breakfast && "open viewing now"}</h6>
-                        <Link to="/locks"className="btn-primary">get lock code</Link>
+                        {/* <Link to="/locks"className="btn-primary">get lock code</Link> */}
+                        <ModalComponent />
+                        <button onClick={this.handleClick} className="btn-primary">Schedule A viewing</button>
                     </article>
                 </div>
             </section>
+            
             {/* <section className="room-extras">
                 <h6>extras</h6>
                 <ul className="extras">
@@ -77,3 +89,5 @@ export default class SingleRoom extends Component {
         );
     }
 }
+
+export default SingleRoom;
