@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import LockButton from './LockButton';
 
 export default function Room({room}) {
     const {name,slug,images,price} =room; 
@@ -20,7 +21,7 @@ export default function Room({room}) {
              </Link>
          </div> 
         <p className="room-info">{name}</p>
-         
+         <LockButton />
         </article>
  );   
 }
