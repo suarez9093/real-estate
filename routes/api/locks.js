@@ -75,9 +75,18 @@ axios.defaults.params['access_token'] = backupAccessToken;  // so I can define s
 
 // GET ALL USERS
 // GET: all users
-axios.get('/v2/users/')
+axios.get('/v2/users/me')
     .then(function(res){
-        console.log(res);
+        console.log(res.config);
+        console.log(res.data);
+
+        // pertinent information:
+        let currentUser = {
+            firstName: res.data.first_name,
+            email: res.data.email,
+            phone: res.data.phone
+        }
+        console.log(currentUser);
     })
     .catch(function(err){
         console.log(err);
