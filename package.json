@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.1.1",
-    "contentful": "^7.8.2",
+    "axios": "^0.18.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",

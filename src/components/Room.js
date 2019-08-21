@@ -19,7 +19,8 @@ import PropTypes from 'prop-types';
                  Features
              </Link>
          </div> 
-        <p className="room-info">{name}</p> 
+        <p className="room-info">{name}</p>
+         
         </article>
  );   
 }
