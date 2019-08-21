@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-export default function Room({room}) {
+ function Room({room}) {
     const {name,slug,images,price} =room; 
     
    
@@ -32,3 +32,4 @@ Room.propTypes = {
         price:PropTypes.number.isRequired
     })
 };
+export default Room

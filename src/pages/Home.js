@@ -19,7 +19,7 @@ function Home(){
               {!isAuthenticated && (
         <button className="btn-primary"
           onClick={() =>
-            loginWithRedirect({ redirect_uri: "http://localhost:3000/rooms"})
+            loginWithRedirect({})
           }
         >
           Log in to view listings

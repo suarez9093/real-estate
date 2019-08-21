@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 
 export default class Navbar extends Component {
     state = {
-        isOPEN: false
+        isOPEN: false,
+        loggedIn: false
     }
     handleToggle = () => {
         this.setState({ isOPEN: !this.state.isOPEN })
