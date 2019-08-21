@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom'
 
 export default class Navbar extends Component {
     state = {
-        isOPEN: false
+        isOPEN: false,
+        loggedIn: false
     }
     handleToggle = () => {
         this.setState({ isOPEN: !this.state.isOPEN })
@@ -18,7 +19,7 @@ export default class Navbar extends Component {
                 <div className="nav-center">
                     <div className="nav-header">
                         <Link to="/">
-                            <img  alt="My Realitor.com" />
+                            {/* <img  alt="My Realitor.com" /> */}
                         </Link>
                         <button type="button" className="nav-btn" onClick={this.handleToggle}>
                             {/* <FaAlignRight className="nav-icon" /> */}

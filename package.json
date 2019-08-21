@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.1.1",
     "axios": "^0.18.1",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
