@@ -55,12 +55,13 @@ export default class SingleRoom extends Component {
                         <h6>price : ${price}</h6>
                         <h6>size: {size} SQFT</h6>
                         <h6>
-                            Gaurage Parking : {
+                            Garage Parking : {
                                 capacity > 1 ?`${capacity} cars`: `${capacity}person`
                             }
                         </h6>
                         <h6>{pets? "open viewings today":"no viewings available today"}</h6>
-                        <h6 className="btn-primary">{breakfast && "open viewing now"}</h6>
+                        <h6>{breakfast && "open viewing now"}</h6>
+                        <Link to="/locks"className="btn-primary">get lock code</Link>
                     </article>
                 </div>
             </section>
