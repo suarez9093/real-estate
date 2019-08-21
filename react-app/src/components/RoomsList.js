@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Room from './Room'
 
 export default function RoomsList({rooms}) {
@@ -17,5 +17,6 @@ export default function RoomsList({rooms}) {
                 })
             }
         </div>
+        
         </section>;
 }

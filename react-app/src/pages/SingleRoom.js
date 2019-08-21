@@ -4,7 +4,10 @@ import Banner from '../components/Banner'
 import Hero from '../components/Hero'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../Context'
+import AppointmentApp from "../components/AppointmentApp";
 import StyledHero from '../components/StyledHero'
+
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 
 export default class SingleRoom extends Component {
@@ -36,6 +39,7 @@ export default class SingleRoom extends Component {
                     <Link to="/rooms" className="btn-primary">
                         back to listings
                     </Link>
+                    
                 </Banner>
             </StyledHero>
             <section className="single-room">
@@ -61,10 +65,19 @@ export default class SingleRoom extends Component {
                         </h6>
                         <h6>{pets? "open viewings today":"no viewings available today"}</h6>
                         <h6>{breakfast && "open viewing now"}</h6>
-                        <Link to="/locks"className="btn-primary">get lock code</Link>
+                        <Link to="/locks"className="btn-primary">
+                           click for code
+                        </Link>
+                        
                     </article>
                 </div>
             </section>
+           
+            <div>
+                     <MuiThemeProvider>
+                        <AppointmentApp />
+                     </MuiThemeProvider>
+             </div>
             {/* <section className="room-extras">
                 <h6>extras</h6>
                 <ul className="extras">
