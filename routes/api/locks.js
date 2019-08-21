@@ -5,6 +5,7 @@ router
   .route("/:id")
   .put(lockHouse)
 
+module.exports = router;
 // **DON'T TRUST THIS ONE YET**
 // GET authentication code
 // axios.get('/oauth/authorize')
