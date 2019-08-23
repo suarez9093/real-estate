@@ -1,0 +1,19 @@
+{
+  "name": "real-estate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suarez9093/real-estate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suarez9093/real-estate/issues"
+  },
+  "homepage": "https://github.com/suarez9093/real-estate#readme"
+}
