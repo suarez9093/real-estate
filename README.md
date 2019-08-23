@@ -1,4 +1,4 @@
-
+![Project Name](gif/demo.gif)
 
 <!-- PROJECT LOGO -->
 <br />
