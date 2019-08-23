@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import { Route, Switch } from 'react-router-dom';
 
 // Auth0
-import Auth0Nav from "./components/Auth0Nav";
+// import Auth0Nav from "./components/Auth0Nav";
 import { useAuth0 } from "./react-auth0-wrapper";
 
 // Material
@@ -20,6 +20,8 @@ import { useAuth0 } from "./react-auth0-wrapper";
 
 function App() {
   const { loading } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
 
   if (loading) {
     return (
@@ -34,8 +36,9 @@ function App() {
       <header>
         {/* <Auth0Nav /> */}
       </header>
-    
-      <Navbar />
+    {isAuthenticated ?
+      <Navbar /> : null
+    }
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/rooms/" component={Rooms} />
