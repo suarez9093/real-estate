@@ -1,10 +1,13 @@
 const router = require("express").Router();
-
+import { lockHouse, unlockHouse } from '../../controllers/locksController';
 // lock the house
 router
-  .route("/:id")
-  .put(lockHouse)
+    .route("/lock")
+    .put(lockHouse)
 
+router
+    .route('/unlock')
+    .put(unlockHouse)
 module.exports = router;
 // **DON'T TRUST THIS ONE YET**
 // GET authentication code
