@@ -1,13 +1,12 @@
+
+ <h3 align="center">Our Project name</h3>
 ![Project Name](gif/demo.gif)
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  
   </a>
-
-  <h3 align="center">Our Project name</h3>
-
   <p align="center">
     An app that lets you set an appointment to view a home that is listed on the market without the need of a real estate agent
     <br />
