@@ -52,7 +52,7 @@ To get a local copy up and running follow these simple example steps.
 
 Alex Suarez - [LinkedIn](https://www.linkedin.com/in/alexsuarez9093/) - suarez9093@hotmail.com
 
-Michael Strickland - [LinkedIn](https://www.linkedin.com/in/alexsuarez9093/) - suarez9093@hotmail.com
+Michael Strickland - [LinkedIn](https://www.linkedin.com/in/michaeladamstrickland/) - suarez9093@hotmail.com
 
-Kalob Carter - [LinkedIn](https://www.linkedin.com/in/alexsuarez9093/) - suarez9093@hotmail.com
+Kalob Carter - [LinkedIn](https://www.linkedin.com/in/kalob-carter-31999b185/) - suarez9093@hotmail.com
 
