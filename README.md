@@ -45,5 +45,5 @@ Alex Suarez - [LinkedIn](https://www.linkedin.com/in/alexsuarez9093/) - suarez90
 
 Michael Strickland - [LinkedIn](https://www.linkedin.com/in/michaeladamstrickland/) - strickland1514@gmail.com
 
-Kalob Carter - [LinkedIn](https://www.linkedin.com/in/kalob-carter-31999b185/) - suarez9093@hotmail.com
+Kalob Carter - [LinkedIn](https://www.linkedin.com/in/kalob-carter-31999b185/) - kalob72@gmail.com
 
