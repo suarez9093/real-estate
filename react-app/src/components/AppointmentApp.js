@@ -67,6 +67,10 @@ class AppointmentApp extends Component {
       slot_date: moment(this.state.appointmentDate).format("YYYY-DD-MM"),
       slot_time: this.state.appointmentSlot
     };
+    console.log('newAppointment', newAppointment);
+    console.log("api base", API_BASE);
+    
+    
     axios
       .post(API_BASE + "appointment", newAppointment)
       .then(response =>
@@ -76,12 +80,22 @@ class AppointmentApp extends Component {
           processed: true
         })
       )
+      
+      
       .catch(err => {
-        console.log(err);
+        console.log('ERROR!!!!',err);
         return this.setState({
           confirmationSnackbarMessage: "Appointment failed to save.",
           confirmationSnackbarOpen: true
         });
+      });console.log("appointment", newAppointment);
+      
+      axios.get(API_BASE + "appointment", {})
+      .then(response =>
+        console.log('mongoose response',response)
+      )
+      .catch(err => {
+        console.log('ERROr boiiii',err);
       });
   }
   //moves the stepper to the next postion using the stepIndex field
@@ -116,28 +130,29 @@ class AppointmentApp extends Component {
     const today = moment().startOf("day"); //start of today 12 am
     const initialSchedule = {};
     initialSchedule[today.format("YYYY-DD-MM")] = true;
-    // const schedule = !appointments.length
-    //   ? initialSchedule
-    //   : appointments.reduce((currentSchedule, appointment) => {
-    //       const { slot_date, slot_time } = appointment;
-    //       const dateString = moment(slot_date, "YYYY-DD-MM").format(
-    //         "YYYY-DD-MM"
-    //       );
-    //       !currentSchedule[slot_date]
-    //         ? (currentSchedule[dateString] = Array(8).fill(false))
-    //         : null;
-    //       Array.isArray(currentSchedule[dateString])
-    //         ? (currentSchedule[dateString][slot_time] = true)
-    //         : null;
-    //       return currentSchedule;
-    //     }, initialSchedule);
+    const schedule = !appointments.length
+      ? initialSchedule
+      : appointments.reduce((currentSchedule, appointment) => {
+          const { slot_date, slot_time } = appointment;
+          const dateString = moment(slot_date, "YYYY-DD-MM").format(
+            "YYYY-DD-MM"
+          );
+          if(!currentSchedule[slot_date]){
+            (currentSchedule[dateString] = Array(8).fill(false))
+          } 
+          if(Array.isArray(currentSchedule[dateString])){
+            currentSchedule[dateString][slot_time] = true
+          }
 
-    // for (let day in schedule) {
-    //   let slots = schedule[day];
-    //   slots.length
-    //     ? slots.every(slot => slot === true) ? (schedule[day] = true) : null
-    //     : null;
-    // }
+          return currentSchedule;
+        }, initialSchedule);
+
+    for (let day in schedule) {
+      let slots = schedule[day];
+      if(slots.length && slots.every(slot => slot === true)){
+          schedule[day] = true
+      }
+    }
 
     this.setState({
       // schedule: schedule
