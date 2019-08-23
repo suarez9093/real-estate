@@ -1,4 +1,4 @@
-![Farmers Market Finder Demo](2019-08-23 12.54.07.gif)
+
 
 <!-- PROJECT LOGO -->
 <br />
