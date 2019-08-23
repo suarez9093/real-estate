@@ -16,18 +16,6 @@
   </p>
 </p>
 
-
-
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Roadmap](#roadmap)
-* [Contact](#contact)
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
