@@ -40,65 +40,7 @@ module.exports = router;
 //         console.log(`****\nGET all locks ✅`);
 //     });
 
-// UNLOCK
-// PUT: this will unlock Locks
-// const lockId = `3d5f236f-fee0-4e91-8e43-71f6eb7503a0`;       // 'Project 3 Lockitron' on Lockitron's dashboard
-// axios.put(`/v2/locks/${lockId}`, {
-//     state: 'unlock'
-// })
-//     .then(function(res) {
-//         console.log(`CONFIG SENT:\n**`);
-//         console.log(res.config)
-//         console.log(`DATA RECEIVED:\n**`);
-//         console.log(res.data);
-
-//         // pertinent information:
-//         let currentLock = {
-//             name: res.data.name,
-//             lockState: res.data.state,
-//         };
-
-//         // human
-//         console.log(`${currentLock.name} has been ${currentLock.lockState}ed!`);
-//     })
-//     .catch(function(err) {
-//         console.log(err);
-//     })
-//     .finally(function(){
-//         console.log(`***\nUNLOCK THE HOUSE ✅`);
-//     });
-
-
-// LOCK
-// PUT: this will lock Locks
-function lockHouse() {
-        const lockId = `3d5f236f-fee0-4e91-8e43-71f6eb7503a0`;      // 'Project 3 Lockitron' on Lockitron's dashboard
-    axios.put(`/v2/locks/${lockId}`, {
-        state: 'lock'
-    })
-        .then(function(res) {
-            console.log(`CONFIG SENT:\n**`);
-            console.log(res.config)
-            console.log(`DATA RECEIVED:\n**`);
-            console.log(res.data);
-
-            // pertinent information:
-            let currentLock = {
-                name: res.data.name,
-                lockState: res.data.state,
-            };
-
-            // human
-            alert(`${currentLock.name} has been ${currentLock.lockState}ed!`);
-        })
-        .catch(function(err) {
-            console.log(err);
-        })
-        .finally(function(){
-            console.log(`***\nLOCK THE HOUSE ✅`);
-        });
-}
-
+// LOCK AND UNLOCK ARE IN THE locksController.js
 
 // GET CURRENT USER
 // GET: current user
