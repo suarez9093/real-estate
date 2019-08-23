@@ -6,6 +6,7 @@ import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/ErroPage";
 import Navbar from './components/Navbar';
 import { Route, Switch } from 'react-router-dom';
+import FormPage from "./pages/FormPage";
 
 // Auth0
 import Auth0Nav from "./components/Auth0Nav";
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/rooms/" component={Rooms} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Route exact path="/formpage/" component={FormPage} />
         <Route component={Error} />
       </Switch>
 

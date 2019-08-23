@@ -5,7 +5,9 @@ import Hero from '../components/Hero'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../Context'
 import StyledHero from '../components/StyledHero'
-import ModalComponent from "../components/ModalComponent/ModalComponent"
+// import ModalComponent from "../components/ModalComponent/ModalComponent"
+// import Form from "./FormButton";
+import FormButton from '../components/FormButton';
 
 
 export default class SingleRoom extends Component {
@@ -70,7 +72,7 @@ export default class SingleRoom extends Component {
                         <Link to="/locks"className="btn-primary">get lock code</Link>
                         <br />
                         <br />
-                        <ModalComponent />
+                        <FormButton />
                     </article>
                 </div>
             </section>
