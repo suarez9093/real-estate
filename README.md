@@ -63,7 +63,7 @@ See the [management system] (https://github.com/suarez9093/real-estate/projects/
 <!-- CONTACT -->
 ## Contact
 
-Alex Suarez - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Alex Suarez - [LinkedIN](https://www.linkedin.com/in/alexsuarez9093/) - email@example.com
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
