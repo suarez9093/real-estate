@@ -1,47 +1,100 @@
 import React, { Component } from "react";
-import { Form, Col } from 'react-bootstrap';
+import { Form, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
+import API from "../utils/API";
+import { InputFirstName, InputLastName, InputEmail, FormBtn} from "../components/Form";
+
 
 
 class FormPage extends Component {
-render(){
-    return(
-        <div>
-            <br />
-        <Form>
-            <Form.Row>
-              <Form.Group as={Col} controlId="formGridFirstName">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control type="name" placeholder="First Name" />
-              </Form.Group>
-              <Form.Group as={Col} controlId="formGridLastName">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control type="lastName" placeholder="Last Name" />
-              </Form.Group>
-            </Form.Row>
-            <Form.Group controlId="formGridEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email " placeholder="Enter Email" required />
-            </Form.Group>
-              <Form.Row>
-              <Form.Group as={Col} controlId="formGridState">
-                <Form.Label>Schedule a time</Form.Label>
-                <Form.Control as="select">
-                  <option>Choose...</option>
-                  <option val="10">10am</option>
-                  <option val="11">11am</option>
-                  <option val="12">12pm</option>
-                  <option val="1">1pm</option>
-                  <option val="2">2pm</option>
-                  <option val="3">3pm</option>
-                  <option val="4">4pm</option>
-                  <option val="5">5pm</option>
-                </Form.Control>
-              </Form.Group>
-            </Form.Row>
-          </Form>
-          </div>
-    )
-}
+    constructor() {
+        super()
+        this.state = {
+            appointments: [],
+            firstName: "",
+            lastName: "",
+            email: "",
+            time: ""
+        }
+        this.handleFormSubmit = this.handleFormSubmit.bind(this)
+        console.log(this.state)
+
+        this.loadAppoitment = this.loadAppoitment.bind(this)
+
+        this.handleInputChange = this.handleInputChange.bind(this)
+    }
+
+
+    loadAppoitment = () => {
+        API.getAppoitnemt().then(
+            res => this.setState({ appointments: res.data, firstName: "", lastName: "", email: "" })
+
+        )
+        alert(`Your appoitment has been booked ${this.state.firstName} ${this.state.lastName}!`)
+
+    }
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.firstName && this.state.lastName) {
+            API.saveAppointment({
+                firstName: this.state.firstName,
+                lastName: this.state.firstName.lastName,
+                email: this.state.email
+            }).then(res => this.loadAppoitment()).catch(err => console.log(err));
+
+
+        }
+
+    }
+
+
+    render() {
+        return (
+            <div>
+                <br />
+                <form>
+              <InputFirstName
+                value={this.state.firstName}
+                onChange={this.handleInputChange}
+                name="firstName"
+                placeholder="First Name (required)"
+              />
+              <InputLastName
+                value={this.state.lastName}
+                onChange={this.handleInputChange}
+                name="lastName"
+                placeholder="Last Name (required)"
+              />
+              <InputEmail
+                value={this.state.email}
+                onChange={this.handleInputChange}
+                name="email"
+                placeholder="Email (Optional)"
+              />
+              <FormBtn
+                disabled={!(this.state.firstName && this.state.lastName)}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Appointment
+              </FormBtn>
+            </form>
+                {/* <Button variant="secondary" onClick={<Link to="/rooms" />}>
+                    Close
+            </Button>
+                <Button onClick={this.handleFormSubmit} variant="primary" type="submit">
+                    Submit
+  </Button> */}
+            </div>
+        )
+    }
 }
 
 
