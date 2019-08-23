@@ -5,7 +5,9 @@ import Hero from '../components/Hero'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../Context'
 import StyledHero from '../components/StyledHero'
-import ModalComponent from "../components/ModalComponent/ModalComponent"
+import ModalComponent from "../components/ModalComponent"
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 
 export default class SingleRoom extends Component {
@@ -70,7 +72,9 @@ export default class SingleRoom extends Component {
                         <Link to="/locks"className="btn-primary">get lock code</Link>
                         <br />
                         <br />
+                        <MuiThemeProvider>
                         <ModalComponent />
+                        </MuiThemeProvider>
                     </article>
                 </div>
             </section>

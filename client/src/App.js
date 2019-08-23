@@ -11,6 +11,8 @@ import { Route, Switch } from 'react-router-dom';
 import Auth0Nav from "./components/Auth0Nav";
 import { useAuth0 } from "./react-auth0-wrapper";
 
+// Material
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 
@@ -26,6 +28,8 @@ function App() {
   }
 
   return (
+    <MuiThemeProvider>
+
     <div className="App">
       <header>
         {/* <Auth0Nav /> */}
@@ -40,6 +44,8 @@ function App() {
       </Switch>
 
     </div>
+    </MuiThemeProvider>
+
   );
 
 }
