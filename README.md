@@ -31,15 +31,6 @@ Mock Description: If you've ever were in the market to buy a house, or simply wa
 * [Lockitron](https://lockitron.com/)
 
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
 <!-- ROADMAP -->
 ## Roadmap
 
