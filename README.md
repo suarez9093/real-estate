@@ -55,8 +55,8 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/suarez9093/real-estate/issues)
-See the [management system](https://github.com/suarez9093/real-estate/projects/2) 
+* See the [open issues](https://github.com/suarez9093/real-estate/issues)
+* See the [management system](https://github.com/suarez9093/real-estate/projects/2) 
 
 
 <!-- CONTACT -->
