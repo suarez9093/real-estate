@@ -3,19 +3,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Our Project name</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An app that lets you set an appointment to view a home that is listed on the market without the need of a real estate agent
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>View the code on github »</strong></a>
     <br />
     <br />
-    <a href="https://project-three-real-estate.herokuapp.com">View Demo</a>
+    <a href="https://project-three-real-estate.herokuapp.com">View live Demo</a>
   </p>
 </p>
 
