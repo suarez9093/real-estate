@@ -5,7 +5,7 @@ import Hero from '../components/Hero'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../Context'
 import StyledHero from '../components/StyledHero'
-import ModalComponent from "../components/ModalComponent"
+import ModalComponent from "../components/ModalComponent/ModalComponent"
 
 
 export default class SingleRoom extends Component {
