@@ -1,6 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
+  "main": "index.js",
   "private": true,
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.1.1",
@@ -19,10 +20,11 @@
     "yarn": "^1.17.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start && node ./express-api/bin/www",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-app && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +40,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suarez9093/real-estate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suarez9093/real-estate/issues"
+  },
+  "homepage": "https://github.com/suarez9093/real-estate#readme"
 }
+
