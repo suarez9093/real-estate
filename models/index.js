@@ -1,3 +1,3 @@
 module.exports = {
-  Locks: require('./locks')
+  Lock: require('./lock')
 };

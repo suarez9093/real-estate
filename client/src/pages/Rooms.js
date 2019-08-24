@@ -13,7 +13,7 @@ function Room() {
     return( 
         <>
     <Hero hero="roomsHero">
-         <Banner title="Near By Listings">
+         <Banner title="Nearby Listings">
               {/* <Link to='/' className="btn-primary"> */}
               {isAuthenticated && <button className="btn-primary" onClick={() => logout()}>Log out</button>}
               {/* </Link> */}
