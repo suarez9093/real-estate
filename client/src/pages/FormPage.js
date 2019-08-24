@@ -49,7 +49,8 @@ class FormPage extends Component {
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
                 email: this.state.email
-            }).then(res => this.loadAppoitment()).catch(err => console.log(err));
+            })
+            // .then(res => this.loadAppoitment()).catch(err => console.log(err));
 
 
         }

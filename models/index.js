@@ -1,3 +1,4 @@
 module.exports = {
-  Locks: require('./locks')
+  Locks: require('./locks'),
+  Appointment: require("./appointment")
 };
