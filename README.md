@@ -19,7 +19,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Mock Description: If you've ever been in the market to buy a house, or simply want to view one, you'd typically have to set up a showing with a realtor to view a home for sale. Our app lets you directly request an appointment to view a home without the need to go through a realtor. You simply open our app, request a showing if the home is listed in the directory of our houses that use smart lock technology and request a code that unlocks a home. Within minutes you can request a showing and be inside viewing a home. 
+If you've ever been in the market to buy a house, or simply want to view one, you'd typically have to set up a showing with a realtor to view a home for sale. Our app lets you directly request an appointment to view a home without the need to go through a realtor. You simply open our app, request a showing if the home is listed in the directory of our houses that use smart lock technology and request a code that unlocks a home. Within minutes you can request a showing and be inside viewing a home. 
 
 ### Built With
 * [React](https://reactjs.org/)
