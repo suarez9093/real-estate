@@ -1,8 +1,9 @@
 const router = require("express").Router();
 
 const lockRoutes = require('./locks');
+const appointmentRoutes = require('./appointment');
 
-// Book routes
 router.use('/lockitron', lockRoutes);
+router.use('/appointment', appointmentRoutes)
 
 module.exports = router;

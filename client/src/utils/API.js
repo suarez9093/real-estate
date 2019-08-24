@@ -1,6 +1,17 @@
 import axios from "axios";
 
 export default {
+
+    getAppoitnemt: function() {
+        return axios.get("/api/appointment");
+      },
+
+    saveAppointment: function(appointmentData) {
+        return axios.post("/api/appointment" , appointmentData)
+        
+    }
+}
+
   // lock the house
   lockHouse: function() {
     return axios.put("/api/lockitron/lock");
@@ -22,3 +33,4 @@ export default {
       return axios.put(`/api/books/${id}`, bookData);
   }
 };
+
