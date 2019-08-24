@@ -21,7 +21,6 @@ import LockButton from './LockButton';
              </Link>
          </div> 
         <p className="room-info">{name}</p>
-         <LockButton />
         </article>
  );   
 }
