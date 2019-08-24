@@ -1,4 +1,5 @@
 const axios = require('axios');
+const db = require('../models');
 
 // Dev access_token that we'll use if getting individual authorization doesn't work
 backupAccessToken = '2bb0bfc90e2423181aeaf2200a06b2c7d4b8cc1ef2b10b94fdb4166fe7c160a6';
@@ -27,13 +28,17 @@ function lockHouse(req, res) {
             console.log(res.data);
 
             // pertinent information:
-            let currentLock = {
-                name: res.data.name,
-                lockState: res.data.state,
-            };
+            // let currentLock = {
+            //     name: res.data.name,
+            //     lockState: res.data.state,
+            // };
+            new Lock(
+                name = res.data.name,
+                lockState = res.data.state
+            )
 
             // human
-            alert(`${currentLock.name} has been ${currentLock.lockState}ed!`);
+            alert(`${Lock.name} has been ${Lock.lockState}ed!`);
         })
         .catch(function(err) {
             console.log(err);
@@ -75,3 +80,19 @@ function unlockHouse(req, res) {
 
 module.exports = lockHouse;
 module.exports = unlockHouse;
+
+module.exports = {
+    create: function(req, res) {
+        db.Lock
+            .create(req.body)
+
+    },
+    lockHouse: function(req, res) {
+        db.Lock
+
+    },
+    unlockHouse: function(req, res) {
+        db.Lock
+
+    }  
+}

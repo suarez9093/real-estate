@@ -1,14 +1,31 @@
 const router = require("express").Router();
-// import { lockHouse, unlockHouse } from '../../controllers/locksController';
-// // lock the house
-// router
-//     .route("/lock")
+const locksController = require('../../controllers/locksController');
+
+// lock the house
+// router.route("/lock")
 //     .put(lockHouse)
 
-// router
-//     .route('/unlock')
+// router.route('/unlock')
 //     .put(unlockHouse)
+
+
+
 // module.exports = router;
+router.route('/')
+    .get(locksController.findAllLocks);
+
+router.route("/lock")
+    .put(locksController.lockHouse);
+
+router.route('/unlock')
+    .put(locksController.unlockHouse);
+
+
+
+module.exports = router;
+
+
+
 // **DON'T TRUST THIS ONE YET**
 // GET authentication code
 // axios.get('/oauth/authorize')
@@ -66,33 +83,3 @@ const router = require("express").Router();
 //     .finally(function(){
 //         console.log(`***\nGET CURRENT USER ✅`);
 //     });
-
-//
-
-
-function unlockHouse(req, res) {
-    axios.put(`/v2/locks/${lockId}`, {
-    state: 'toggle'
-})
-    .then(function(res) {
-        console.log(`CONFIG SENT:\n**`);
-        console.log(res.config)
-        console.log(`DATA RECEIVED:\n**`);
-        console.log(res.data);
-
-        // pertinent information:
-        let currentLock = {
-            name: res.data.name,
-            lockState: res.data.state,
-        };
-
-        // human
-        console.log(`${currentLock.name} has been ${currentLock.lockState}ed!`);
-    })
-    .catch(function(err) {
-        console.log(err);
-    })
-    .finally(function(){
-        console.log(`***\nUNLOCK THE HOUSE ✅`);
-});
-}
