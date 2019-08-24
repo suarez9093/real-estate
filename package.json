@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cd react-app && npm run build",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./express-api/bin/www && cd react-app start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,5 @@
   "bugs": {
     "url": "https://github.com/suarez9093/real-estate/issues"
   },
-  "homepage": "https://github.com/suarez9093/real-estate#readme"
+  "homepage": "http://myname.github.io/myapp"
 }
