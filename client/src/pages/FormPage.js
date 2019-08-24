@@ -17,11 +17,12 @@ class FormPage extends Component {
             time: ""
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
-        console.log(this.state)
-
         this.loadAppoitment = this.loadAppoitment.bind(this)
-
         this.handleInputChange = this.handleInputChange.bind(this)
+    }
+
+    componentDidMount() {
+        this.loadAppoitment();
     }
 
 
@@ -30,7 +31,7 @@ class FormPage extends Component {
             res => this.setState({ appointments: res.data, firstName: "", lastName: "", email: "" })
 
         )
-        alert(`Your appoitment has been booked ${this.state.firstName} ${this.state.lastName}!`)
+        // alert(`Your appoitment has been booked ${this.state.firstName} ${this.state.lastName}!`)
 
     }
 
@@ -46,7 +47,7 @@ class FormPage extends Component {
         if (this.state.firstName && this.state.lastName) {
             API.saveAppointment({
                 firstName: this.state.firstName,
-                lastName: this.state.firstName.lastName,
+                lastName: this.state.lastName,
                 email: this.state.email
             }).then(res => this.loadAppoitment()).catch(err => console.log(err));
 
@@ -60,7 +61,7 @@ class FormPage extends Component {
         return (
             <div>
                 <br />
-                <form>
+            <Form>
               <InputFirstName
                 value={this.state.firstName}
                 onChange={this.handleInputChange}
@@ -85,13 +86,8 @@ class FormPage extends Component {
               >
                 Submit Appointment
               </FormBtn>
-            </form>
-                {/* <Button variant="secondary" onClick={<Link to="/rooms" />}>
-                    Close
-            </Button>
-                <Button onClick={this.handleFormSubmit} variant="primary" type="submit">
-                    Submit
-  </Button> */}
+            </Form>
+               
             </div>
         )
     }
