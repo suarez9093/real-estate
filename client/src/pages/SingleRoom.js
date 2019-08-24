@@ -9,14 +9,9 @@ import StyledHero from '../components/StyledHero'
 // import ModalComponent from "../components/ModalComponent/ModalComponent"
 // import Form from "./FormButton";
 import FormButton from '../components/FormButton';
-import React, { Component } from 'react';
-import defaultBcg from '../images/room-1.jpeg';
-import Banner from '../components/Banner';
-import Hero from '../components/Hero';
-import {Link} from 'react-router-dom';
-import {RoomContext} from '../Context';
-import StyledHero from '../components/StyledHero';
-import UnlockButton from '../components/UnlockButton';
+// import React, { Component } from 'react';
+// import defaultBcg from '../images/room-1.jpeg';
+
 import LockButton from '../components/LockButton';
 
 
@@ -87,8 +82,8 @@ export default class SingleRoom extends Component {
                         <FormButton />
 
                         {/* <Link to="/locks"className="btn-primary">get lock code</Link> */}
-                        <UnlockButton />
-                        <LockButton />
+                        {/* <UnlockButton /> */}
+                        {/* <LockButton /> */}
 
                     </article>
                 </div>

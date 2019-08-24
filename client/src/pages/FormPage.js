@@ -17,18 +17,18 @@ class FormPage extends Component {
             time: ""
         }
         this.handleFormSubmit = this.handleFormSubmit.bind(this)
-        this.loadAppoitment = this.loadAppoitment.bind(this)
+        this.loadAppointment = this.loadAppointment.bind(this)
         this.handleInputChange = this.handleInputChange.bind(this)
     }
 
     componentDidMount() {
-        this.loadAppoitment();
+        this.loadAppointment();
     }
 
 
-    loadAppoitment = () => {
-        API.getAppoitnemt().then(
-            res => this.setState({ appointments: res.data, firstName: "", lastName: "", email: "" })
+    loadAppointment () {
+        API.getAppointment().then(res => 
+          this.setState({ appointments: res.data, firstName: "", lastName: "", email: "" })
 
         )
         // alert(`Your appoitment has been booked ${this.state.firstName} ${this.state.lastName}!`)
