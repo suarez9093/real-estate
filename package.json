@@ -6,7 +6,7 @@
     "@auth0/auth0-spa-js": "^1.1.1",
     "axios": "^0.18.1",
     "bootstrap": "^4.3.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "if-env": "^1.0.4",
     "mdbreact": "^4.19.1",
     "mongoose": "^5.6.10",
